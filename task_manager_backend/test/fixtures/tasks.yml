@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  due_date: MyString
+  status: MyString
+  description: 
+  milestone: one
+  resource: one
+  assigner: one
+  type: one
+
+two:
+  name: MyString
+  due_date: MyString
+  status: MyString
+  description: 
+  milestone: two
+  resource: two
+  assigner: two
+  type: two
