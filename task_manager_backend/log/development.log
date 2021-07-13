@@ -91,3 +91,473 @@ FOREIGN KEY ("type_id")
   [1m[36mAssigner Load (0.5ms)[0m  [1m[34mSELECT "assigners".* FROM "assigners" LIMIT ?[0m  [["LIMIT", 11]]
   [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Create (0.6ms)[0m  [1m[32mINSERT INTO "projects" ("name", "client", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Galen"], ["client", "Marks-Romaguera"], ["created_at", "2021-07-13 03:10:36.686841"], ["updated_at", "2021-07-13 03:10:36.686841"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "client", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Plutarch"], ["client", "Cruickshank-Stroman"], ["created_at", "2021-07-13 03:10:36.690807"], ["updated_at", "2021-07-13 03:10:36.690807"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "client", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Hippocrates"], ["client", "Yundt, Prosacco and Toy"], ["created_at", "2021-07-13 03:10:36.694178"], ["updated_at", "2021-07-13 03:10:36.694178"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "client", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Archimedes"], ["client", "Rosenbaum, Abernathy and Howell"], ["created_at", "2021-07-13 03:10:36.697561"], ["updated_at", "2021-07-13 03:10:36.697561"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "client", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Heraclitus"], ["client", "Bashirian-Tromp"], ["created_at", "2021-07-13 03:10:36.700794"], ["updated_at", "2021-07-13 03:10:36.700794"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "assigners"[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "assigners" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "title" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "milestones"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "milestones" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "project_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX "index_milestones_on_project_id" ON "milestones" ("project_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "projects"[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "projects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "client" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "resources"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "resources" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "title" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "tasks"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "due_date" varchar, "status" varchar, "description" text, "milestone_id" integer NOT NULL, "resource_id" integer NOT NULL, "assigner_id" integer NOT NULL, "type_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_assigner_id" ON "tasks" ("assigner_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_milestone_id" ON "tasks" ("milestone_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_resource_id" ON "tasks" ("resource_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_type_id" ON "tasks" ("type_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "types"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "types" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "amilestones" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "description" text DEFAULT NULL, "project_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_amilestones_on_project_id" ON "amilestones" ("project_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "amilestones" ("id","name","description","project_id","created_at","updated_at")
+                     SELECT "id","name","description","project_id","created_at","updated_at" FROM "milestones"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "milestones"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "milestones" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "description" text DEFAULT NULL, "project_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_9bd0a0c791"
+FOREIGN KEY ("project_id")
+  REFERENCES "projects" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_milestones_on_project_id" ON "milestones" ("project_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "milestones" ("id","name","description","project_id","created_at","updated_at")
+                     SELECT "id","name","description","project_id","created_at","updated_at" FROM "amilestones"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "amilestones"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "due_date" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "description" text DEFAULT NULL, "milestone_id" integer NOT NULL, "resource_id" integer NOT NULL, "assigner_id" integer NOT NULL, "type_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_type_id" ON "atasks" ("type_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_resource_id" ON "atasks" ("resource_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_milestone_id" ON "atasks" ("milestone_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_assigner_id" ON "atasks" ("assigner_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atasks" ("id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at")
+                     SELECT "id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at" FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "tasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "due_date" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "description" text DEFAULT NULL, "milestone_id" integer NOT NULL, "resource_id" integer NOT NULL, "assigner_id" integer NOT NULL, "type_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_e53f73cb3f"
+FOREIGN KEY ("assigner_id")
+  REFERENCES "assigners" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_assigner_id" ON "tasks" ("assigner_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_milestone_id" ON "tasks" ("milestone_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_resource_id" ON "tasks" ("resource_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_type_id" ON "tasks" ("type_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at")
+                     SELECT "id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at" FROM "atasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atasks"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "due_date" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "description" text DEFAULT NULL, "milestone_id" integer NOT NULL, "resource_id" integer NOT NULL, "assigner_id" integer NOT NULL, "type_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_type_id" ON "atasks" ("type_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_resource_id" ON "atasks" ("resource_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_milestone_id" ON "atasks" ("milestone_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_assigner_id" ON "atasks" ("assigner_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atasks" ("id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at")
+                     SELECT "id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at" FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "tasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "due_date" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "description" text DEFAULT NULL, "milestone_id" integer NOT NULL, "resource_id" integer NOT NULL, "assigner_id" integer NOT NULL, "type_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_e53f73cb3f"
+FOREIGN KEY ("assigner_id")
+  REFERENCES "assigners" ("id")
+, CONSTRAINT "fk_rails_3652cc4b40"
+FOREIGN KEY ("milestone_id")
+  REFERENCES "milestones" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_assigner_id" ON "tasks" ("assigner_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_milestone_id" ON "tasks" ("milestone_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_resource_id" ON "tasks" ("resource_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_type_id" ON "tasks" ("type_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at")
+                     SELECT "id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at" FROM "atasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atasks"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "due_date" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "description" text DEFAULT NULL, "milestone_id" integer NOT NULL, "resource_id" integer NOT NULL, "assigner_id" integer NOT NULL, "type_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_type_id" ON "atasks" ("type_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_resource_id" ON "atasks" ("resource_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_milestone_id" ON "atasks" ("milestone_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_assigner_id" ON "atasks" ("assigner_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atasks" ("id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at")
+                     SELECT "id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at" FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "tasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "due_date" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "description" text DEFAULT NULL, "milestone_id" integer NOT NULL, "resource_id" integer NOT NULL, "assigner_id" integer NOT NULL, "type_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_3652cc4b40"
+FOREIGN KEY ("milestone_id")
+  REFERENCES "milestones" ("id")
+, CONSTRAINT "fk_rails_e53f73cb3f"
+FOREIGN KEY ("assigner_id")
+  REFERENCES "assigners" ("id")
+, CONSTRAINT "fk_rails_fe7b6e9963"
+FOREIGN KEY ("resource_id")
+  REFERENCES "resources" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_assigner_id" ON "tasks" ("assigner_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_milestone_id" ON "tasks" ("milestone_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_resource_id" ON "tasks" ("resource_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_type_id" ON "tasks" ("type_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at")
+                     SELECT "id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at" FROM "atasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atasks"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "due_date" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "description" text DEFAULT NULL, "milestone_id" integer NOT NULL, "resource_id" integer NOT NULL, "assigner_id" integer NOT NULL, "type_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_type_id" ON "atasks" ("type_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_resource_id" ON "atasks" ("resource_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_milestone_id" ON "atasks" ("milestone_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_assigner_id" ON "atasks" ("assigner_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "atasks" ("id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at")
+                     SELECT "id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at" FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "tasks"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "due_date" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "description" text DEFAULT NULL, "milestone_id" integer NOT NULL, "resource_id" integer NOT NULL, "assigner_id" integer NOT NULL, "type_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_fe7b6e9963"
+FOREIGN KEY ("resource_id")
+  REFERENCES "resources" ("id")
+, CONSTRAINT "fk_rails_e53f73cb3f"
+FOREIGN KEY ("assigner_id")
+  REFERENCES "assigners" ("id")
+, CONSTRAINT "fk_rails_3652cc4b40"
+FOREIGN KEY ("milestone_id")
+  REFERENCES "milestones" ("id")
+, CONSTRAINT "fk_rails_9c9886445b"
+FOREIGN KEY ("type_id")
+  REFERENCES "types" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_assigner_id" ON "tasks" ("assigner_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_milestone_id" ON "tasks" ("milestone_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_resource_id" ON "tasks" ("resource_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_type_id" ON "tasks" ("type_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at")
+                     SELECT "id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at" FROM "atasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atasks"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210712011838)[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210712010010),
+(20210712010340),
+(20210712010538),
+(20210712010600),
+(20210712010732);
+
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-07-13 03:17:23.108598"], ["updated_at", "2021-07-13 03:17:23.108598"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "fe883219062b4f7b251663513f4fc0a003855ef0"], ["created_at", "2021-07-13 03:17:23.115371"], ["updated_at", "2021-07-13 03:17:23.115371"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "assigners"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "assigners" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "title" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "milestones"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "milestones" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "project_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX "index_milestones_on_project_id" ON "milestones" ("project_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "projects"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "projects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "client" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "resources"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "resources" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "title" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "tasks"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "due_date" varchar, "status" varchar, "description" text, "milestone_id" integer NOT NULL, "resource_id" integer NOT NULL, "assigner_id" integer NOT NULL, "type_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_assigner_id" ON "tasks" ("assigner_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_milestone_id" ON "tasks" ("milestone_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_resource_id" ON "tasks" ("resource_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_type_id" ON "tasks" ("type_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "types"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "types" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "amilestones" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "description" text DEFAULT NULL, "project_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_amilestones_on_project_id" ON "amilestones" ("project_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "amilestones" ("id","name","description","project_id","created_at","updated_at")
+                     SELECT "id","name","description","project_id","created_at","updated_at" FROM "milestones"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "milestones"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "milestones" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "description" text DEFAULT NULL, "project_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_9bd0a0c791"
+FOREIGN KEY ("project_id")
+  REFERENCES "projects" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_milestones_on_project_id" ON "milestones" ("project_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "milestones" ("id","name","description","project_id","created_at","updated_at")
+                     SELECT "id","name","description","project_id","created_at","updated_at" FROM "amilestones"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "amilestones"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "due_date" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "description" text DEFAULT NULL, "milestone_id" integer NOT NULL, "resource_id" integer NOT NULL, "assigner_id" integer NOT NULL, "type_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_type_id" ON "atasks" ("type_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_resource_id" ON "atasks" ("resource_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_milestone_id" ON "atasks" ("milestone_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_assigner_id" ON "atasks" ("assigner_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "atasks" ("id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at")
+                     SELECT "id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at" FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "tasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "due_date" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "description" text DEFAULT NULL, "milestone_id" integer NOT NULL, "resource_id" integer NOT NULL, "assigner_id" integer NOT NULL, "type_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_e53f73cb3f"
+FOREIGN KEY ("assigner_id")
+  REFERENCES "assigners" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_assigner_id" ON "tasks" ("assigner_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_milestone_id" ON "tasks" ("milestone_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_resource_id" ON "tasks" ("resource_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_type_id" ON "tasks" ("type_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at")
+                     SELECT "id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at" FROM "atasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atasks"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "due_date" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "description" text DEFAULT NULL, "milestone_id" integer NOT NULL, "resource_id" integer NOT NULL, "assigner_id" integer NOT NULL, "type_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_type_id" ON "atasks" ("type_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_resource_id" ON "atasks" ("resource_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_milestone_id" ON "atasks" ("milestone_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_assigner_id" ON "atasks" ("assigner_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atasks" ("id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at")
+                     SELECT "id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at" FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "tasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "due_date" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "description" text DEFAULT NULL, "milestone_id" integer NOT NULL, "resource_id" integer NOT NULL, "assigner_id" integer NOT NULL, "type_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_e53f73cb3f"
+FOREIGN KEY ("assigner_id")
+  REFERENCES "assigners" ("id")
+, CONSTRAINT "fk_rails_3652cc4b40"
+FOREIGN KEY ("milestone_id")
+  REFERENCES "milestones" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_assigner_id" ON "tasks" ("assigner_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_milestone_id" ON "tasks" ("milestone_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_resource_id" ON "tasks" ("resource_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_type_id" ON "tasks" ("type_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "tasks" ("id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at")
+                     SELECT "id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at" FROM "atasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atasks"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "due_date" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "description" text DEFAULT NULL, "milestone_id" integer NOT NULL, "resource_id" integer NOT NULL, "assigner_id" integer NOT NULL, "type_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_type_id" ON "atasks" ("type_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_resource_id" ON "atasks" ("resource_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_milestone_id" ON "atasks" ("milestone_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_assigner_id" ON "atasks" ("assigner_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atasks" ("id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at")
+                     SELECT "id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at" FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "tasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "due_date" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "description" text DEFAULT NULL, "milestone_id" integer NOT NULL, "resource_id" integer NOT NULL, "assigner_id" integer NOT NULL, "type_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_3652cc4b40"
+FOREIGN KEY ("milestone_id")
+  REFERENCES "milestones" ("id")
+, CONSTRAINT "fk_rails_e53f73cb3f"
+FOREIGN KEY ("assigner_id")
+  REFERENCES "assigners" ("id")
+, CONSTRAINT "fk_rails_fe7b6e9963"
+FOREIGN KEY ("resource_id")
+  REFERENCES "resources" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_assigner_id" ON "tasks" ("assigner_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_milestone_id" ON "tasks" ("milestone_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_resource_id" ON "tasks" ("resource_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_type_id" ON "tasks" ("type_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at")
+                     SELECT "id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at" FROM "atasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atasks"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "due_date" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "description" text DEFAULT NULL, "milestone_id" integer NOT NULL, "resource_id" integer NOT NULL, "assigner_id" integer NOT NULL, "type_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_type_id" ON "atasks" ("type_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_resource_id" ON "atasks" ("resource_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_milestone_id" ON "atasks" ("milestone_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atasks_on_assigner_id" ON "atasks" ("assigner_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atasks" ("id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at")
+                     SELECT "id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at" FROM "tasks"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "tasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "due_date" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "description" text DEFAULT NULL, "milestone_id" integer NOT NULL, "resource_id" integer NOT NULL, "assigner_id" integer NOT NULL, "type_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_fe7b6e9963"
+FOREIGN KEY ("resource_id")
+  REFERENCES "resources" ("id")
+, CONSTRAINT "fk_rails_e53f73cb3f"
+FOREIGN KEY ("assigner_id")
+  REFERENCES "assigners" ("id")
+, CONSTRAINT "fk_rails_3652cc4b40"
+FOREIGN KEY ("milestone_id")
+  REFERENCES "milestones" ("id")
+, CONSTRAINT "fk_rails_9c9886445b"
+FOREIGN KEY ("type_id")
+  REFERENCES "types" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_assigner_id" ON "tasks" ("assigner_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_milestone_id" ON "tasks" ("milestone_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_resource_id" ON "tasks" ("resource_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_type_id" ON "tasks" ("type_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at")
+                     SELECT "id","name","due_date","status","description","milestone_id","resource_id","assigner_id","type_id","created_at","updated_at" FROM "atasks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atasks"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210712011838)[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210712010010),
+(20210712010340),
+(20210712010538),
+(20210712010600),
+(20210712010732);
+
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-07-13 03:17:23.283400"], ["updated_at", "2021-07-13 03:17:23.283400"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2021-07-13 03:17:23.287907"], ["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "fe883219062b4f7b251663513f4fc0a003855ef0"], ["created_at", "2021-07-13 03:17:23.292049"], ["updated_at", "2021-07-13 03:17:23.292049"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "client", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Anaxagoras"], ["client", "Block LLC"], ["created_at", "2021-07-13 03:17:23.506228"], ["updated_at", "2021-07-13 03:17:23.506228"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "client", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Galen"], ["client", "Hettinger-Brown"], ["created_at", "2021-07-13 03:17:23.509894"], ["updated_at", "2021-07-13 03:17:23.509894"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "client", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Galen"], ["client", "Toy, Rodriguez and Abshire"], ["created_at", "2021-07-13 03:17:23.512960"], ["updated_at", "2021-07-13 03:17:23.512960"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "client", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Gorgias"], ["client", "Wolf Inc"], ["created_at", "2021-07-13 03:17:23.516028"], ["updated_at", "2021-07-13 03:17:23.516028"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "client", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Democritus"], ["client", "Marvin LLC"], ["created_at", "2021-07-13 03:17:23.519598"], ["updated_at", "2021-07-13 03:17:23.519598"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMilestone Create (0.3ms)[0m  [1m[32mINSERT INTO "milestones" ("name", "description", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Collection"], ["description", "Collecting data for processing"], ["project_id", 1], ["created_at", "2021-07-13 03:17:23.541772"], ["updated_at", "2021-07-13 03:17:23.541772"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMilestone Create (0.3ms)[0m  [1m[32mINSERT INTO "milestones" ("name", "description", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Processing"], ["description", "Process data in database"], ["project_id", 2], ["created_at", "2021-07-13 03:17:23.546155"], ["updated_at", "2021-07-13 03:17:23.546155"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Create (0.4ms)[0m  [1m[32mINSERT INTO "projects" ("name", "client", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Diogenes"], ["client", "Abbott, Bergstrom and Reynolds"], ["created_at", "2021-07-13 03:17:32.239225"], ["updated_at", "2021-07-13 03:17:32.239225"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "client", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Arcesilaus"], ["client", "Schinner-Balistreri"], ["created_at", "2021-07-13 03:17:32.243646"], ["updated_at", "2021-07-13 03:17:32.243646"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "client", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Archimedes"], ["client", "Effertz, Powlowski and Reinger"], ["created_at", "2021-07-13 03:17:32.247034"], ["updated_at", "2021-07-13 03:17:32.247034"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "client", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Galen"], ["client", "Kunze-Hermann"], ["created_at", "2021-07-13 03:17:32.250093"], ["updated_at", "2021-07-13 03:17:32.250093"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "client", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Thucydides"], ["client", "Hauck and Sons"], ["created_at", "2021-07-13 03:17:32.253243"], ["updated_at", "2021-07-13 03:17:32.253243"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMilestone Create (0.3ms)[0m  [1m[32mINSERT INTO "milestones" ("name", "description", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Collection"], ["description", "Collecting data for processing"], ["project_id", 1], ["created_at", "2021-07-13 03:17:32.271129"], ["updated_at", "2021-07-13 03:17:32.271129"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMilestone Create (0.3ms)[0m  [1m[32mINSERT INTO "milestones" ("name", "description", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Processing"], ["description", "Process data in database"], ["project_id", 2], ["created_at", "2021-07-13 03:17:32.286334"], ["updated_at", "2021-07-13 03:17:32.286334"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMilestone Load (0.2ms)[0m  [1m[34mSELECT "milestones".* FROM "milestones" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mMilestone Load (0.1ms)[0m  [1m[34mSELECT "milestones".* FROM "milestones" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mMilestone Load (0.1ms)[0m  [1m[34mSELECT "milestones".* FROM "milestones" ORDER BY "milestones"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mMilestone Load (0.2ms)[0m  [1m[34mSELECT "milestones".* FROM "milestones" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMilestone Load (0.2ms)[0m  [1m[34mSELECT "milestones".* FROM "milestones" WHERE "milestones"."project_id" = ? LIMIT ?[0m  [["project_id", 1], ["LIMIT", 11]]
