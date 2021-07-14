@@ -5,13 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'faker'
+# require 'faker'
 
-5.times do
-    Project.create(name: Faker::GreekPhilosophers.name, client: Faker::Company.name)
-end
+# 5.times do
+#     Project.create(name: Faker::GreekPhilosophers.name, client: Faker::Company.name)
+# end
 
-Milestone.create([
-    {name: "Collection", description: "Collecting data for processing", project_id: 1},
-    {name: "Processing", description: "Process data in database", project_id: 2}
-])
+# Milestone.create([
+#     {name: "Collection", description: "Collecting data for processing", project_id: 1},
+#     {name: "Processing", description: "Process data in database", project_id: 2}
+# ])

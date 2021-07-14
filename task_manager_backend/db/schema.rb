@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_12_011838) do
+ActiveRecord::Schema.define(version: 2021_07_14_000149) do
 
   create_table "assigners", force: :cascade do |t|
     t.string "name"
@@ -22,15 +22,24 @@ ActiveRecord::Schema.define(version: 2021_07_12_011838) do
   create_table "milestones", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.integer "project_id", null: false
+    t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["project_id"], name: "index_milestones_on_project_id"
+  end
+
+  create_table "project_milestones", force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.integer "milestone_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["milestone_id"], name: "index_project_milestones_on_milestone_id"
+    t.index ["project_id"], name: "index_project_milestones_on_project_id"
   end
 
   create_table "projects", force: :cascade do |t|
     t.string "name"
     t.string "client"
+    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -66,7 +75,8 @@ ActiveRecord::Schema.define(version: 2021_07_12_011838) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "milestones", "projects"
+  add_foreign_key "project_milestones", "milestones"
+  add_foreign_key "project_milestones", "projects"
   add_foreign_key "tasks", "assigners"
   add_foreign_key "tasks", "milestones"
   add_foreign_key "tasks", "resources"

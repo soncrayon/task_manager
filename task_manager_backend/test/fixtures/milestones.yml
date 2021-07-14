@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  description: 
-  project: one
+  description: MyText
+  status: MyString
 
 two:
   name: MyString
-  description: 
-  project: two
+  description: MyText
+  status: MyString

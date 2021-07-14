@@ -3,7 +3,7 @@ class CreateMilestones < ActiveRecord::Migration[6.0]
     create_table :milestones do |t|
       t.string :name
       t.text :description
-      t.belongs_to :project, null: false, foreign_key: true
+      t.string :status
 
       t.timestamps
     end

@@ -12,7 +12,7 @@ class MilestonesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create milestone" do
     assert_difference('Milestone.count') do
-      post milestones_url, params: { milestone: { description: @milestone.description, name: @milestone.name, project_id: @milestone.project_id } }, as: :json
+      post milestones_url, params: { milestone: { description: @milestone.description, name: @milestone.name, status: @milestone.status } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class MilestonesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update milestone" do
-    patch milestone_url(@milestone), params: { milestone: { description: @milestone.description, name: @milestone.name, project_id: @milestone.project_id } }, as: :json
+    patch milestone_url(@milestone), params: { milestone: { description: @milestone.description, name: @milestone.name, status: @milestone.status } }, as: :json
     assert_response 200
   end
 

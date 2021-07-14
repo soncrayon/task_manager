@@ -1,5 +1,5 @@
 class Milestone < ApplicationRecord
-  belongs_to :project
-  has_many :tasks
-  has_many :types, through: :tasks
+    has_many :tasks
+    has_many :project_milestones
+    has_many :projects, through: :project_milestones
 end

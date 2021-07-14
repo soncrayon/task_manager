@@ -3,7 +3,9 @@
 one:
   name: MyString
   client: MyString
+  description: MyText
 
 two:
   name: MyString
   client: MyString
+  description: MyText

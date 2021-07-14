@@ -3,6 +3,7 @@ class CreateProjects < ActiveRecord::Migration[6.0]
     create_table :projects do |t|
       t.string :name
       t.string :client
+      t.text :description
 
       t.timestamps
     end
