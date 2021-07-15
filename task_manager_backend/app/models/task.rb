@@ -5,5 +5,5 @@ class Task < ApplicationRecord
 
   attr_accessor :assigner, :resource
 
-  
+
 end

@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  resources :project_team_members
-  resources :team_members
+  resources :user_tasks
   resources :users
   resources :milestones
   resources :projects

@@ -4,6 +4,7 @@ class CreateProjects < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :client
       t.text :description
+      t.string :team_members, array: true, default: []
 
       t.timestamps
     end
