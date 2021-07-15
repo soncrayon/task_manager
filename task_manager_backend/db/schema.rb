@@ -10,14 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_14_000149) do
-
-  create_table "assigners", force: :cascade do |t|
-    t.string "name"
-    t.string "title"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
+ActiveRecord::Schema.define(version: 2021_07_15_011059) do
 
   create_table "milestones", force: :cascade do |t|
     t.string "name"
@@ -36,17 +29,19 @@ ActiveRecord::Schema.define(version: 2021_07_14_000149) do
     t.index ["project_id"], name: "index_project_milestones_on_project_id"
   end
 
+  create_table "project_team_members", force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.integer "team_member_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["project_id"], name: "index_project_team_members_on_project_id"
+    t.index ["team_member_id"], name: "index_project_team_members_on_team_member_id"
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string "name"
     t.string "client"
     t.text "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "resources", force: :cascade do |t|
-    t.string "name"
-    t.string "title"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -68,6 +63,11 @@ ActiveRecord::Schema.define(version: 2021_07_14_000149) do
     t.index ["type_id"], name: "index_tasks_on_type_id"
   end
 
+  create_table "team_members", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "types", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -75,8 +75,17 @@ ActiveRecord::Schema.define(version: 2021_07_14_000149) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "title"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   add_foreign_key "project_milestones", "milestones"
   add_foreign_key "project_milestones", "projects"
+  add_foreign_key "project_team_members", "projects"
+  add_foreign_key "project_team_members", "team_members"
   add_foreign_key "tasks", "assigners"
   add_foreign_key "tasks", "milestones"
   add_foreign_key "tasks", "resources"
