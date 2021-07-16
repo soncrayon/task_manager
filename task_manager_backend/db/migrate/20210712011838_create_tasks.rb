@@ -4,8 +4,6 @@ class CreateTasks < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :due_date
       t.string :status
-      t.string :assigner
-      t.string :resource, array: true, default: [] 
       t.text :description
       t.belongs_to :milestone, null: false, foreign_key: true
       # t.belongs_to :resource, null: false, foreign_key: true

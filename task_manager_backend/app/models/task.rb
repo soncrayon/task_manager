@@ -1,9 +1,8 @@
 class Task < ApplicationRecord
   belongs_to :milestone
   belongs_to :type
-  belongs_to :user
-
-  attr_accessor :assigner, :resource
-
-
+  has_many :assigners
+  has_many :resources
+  has_many :users, through: :assigners
+  has_many :users, through: :resources
 end
