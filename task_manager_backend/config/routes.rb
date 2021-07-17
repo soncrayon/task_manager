@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   resources :team_members
   resources :resources
   resources :assigners
-  resources :user_tasks
   resources :users
   resources :milestones
   resources :projects

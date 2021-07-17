@@ -1,17 +1,68 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-# require 'faker'
+5.times {
+    Project.create(name: Faker::GreekPhilosophers.name, client: Faker::Company.name, description: Faker::Lorem.paragraph)
+}
 
-# 5.times do
-#     Project.create(name: Faker::GreekPhilosophers.name, client: Faker::Company.name)
-# end
+Milestone.create([
+    {name: "Collection", description: "Collecting data for processing", status: "On Track"},
+    {name: "Processing", description: "Process data in database", status: "Off Track"},
+    {name: "Project Administration", description: "Account management and technical support", status: "On Track"},
+    {name: "Data Transformation", description: "Mass data manipulation and revision", status: "On Track"},
+    {name: "Review Support", description: "Ongoing support of data review and data manipulation", status: "Off Track"},
+    {name: "Production", description: "Production of data to receiving parties", status: "On Track"},
+    {name: "Ad Hoc", description: "Ad hoc tasks", status: "On Track"}
+])
 
-# Milestone.create([
-#     {name: "Collection", description: "Collecting data for processing", project_id: 1},
-#     {name: "Processing", description: "Process data in database", project_id: 2}
-# ])
+
+Project.all.each { |proj| 
+    x = 0
+    Milestone.all.length.times {
+        ProjectMilestone.create(project_id: proj.id, milestone_id: Milestone.all.length - x)
+        x = x + 1
+    }
+}
+
+Type.create([
+    {name: "Phase 1", description: "First phase"},
+    {name: "Phase 2", description: "Second phase"},
+    {name: "Phase 3", description: "Third phase"},
+    {name: "Phase 4", description: "Fourth phase"},
+    {name: "Phase 5", description: "Fifth phase"},
+])
+
+Milestone.all.each { |mils|
+    Type.all.each { |type|
+        5.times {
+            Task.create({name: "#{Faker::Hacker.verb} #{Faker::Hacker.adjective} #{Faker::Hacker.noun}", 
+            due_date: (Time.now + rand(1000000)).strftime("%b %d, %Y"), 
+            status: "Active", 
+            description: Faker::Lorem.paragraph, 
+            milestone_id: mils.id, 
+            type_id: type.id})
+        }
+    }
+}
+
+users_array = []
+
+100.times {
+    users_array << Faker::TvShows::RuPaul.queen 
+}
+
+users_array = users_array.uniq
+
+for user in users_array 
+    User.create({name: user, title: Faker::Job.title})
+end
+
+Project.all.each { |proj|
+    x = proj.id * 10
+    5.times {
+        TeamMember.create({project_id: proj.id, user_id: User.all[x].id})
+        x = x + 1
+    }
+}
+
+Task.all.each { |task|
+    Assigner.create({task_id: task.id, user_id: User.all[rand(User.all.length)].id})
+    Resource.create({task_id: task.id, user_id: User.all[rand(User.all.length)].id})
+}
