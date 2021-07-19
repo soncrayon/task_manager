@@ -46,19 +46,19 @@ class App extends React.Component {
             <div className="menu_container">
 
             <div className="nav_item"> 
-              <Link to="/">PROJECTS</Link> 
+              <Link to="/">Projects</Link> 
             </div>
 
             <div className="nav_item"> 
-              <Link to="/tasks">TASKS</Link> 
+              <Link to="/tasks">Tasks</Link> 
             </div>
 
             <div className="nav_item"> 
-              <Link to="/clients">CLIENTS</Link>
+              <Link to="/clients">Clients</Link>
             </div>
 
             <div className="nav_item"> 
-              <Link to="/personnel">PERSONNEL</Link> 
+              <Link to="/personnel">Personnel</Link> 
             </div>
 
             </div>

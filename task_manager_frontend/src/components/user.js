@@ -2,14 +2,14 @@ import React from 'react'
 
 export const User = (props) => {
     return (
-        <div className="task_block">
-            <div>
+        <div className="item_row">
+            <div className="row_item">
                 {props.name}
             </div>
-            <div>
+            <div className="row_item">
                 {props.title}
             </div>
-            <div>
+            <div className="row_item">
                 {props.personnel_id}
             </div>
         </div>
