@@ -46,7 +46,11 @@ class App extends React.Component {
             <div className="menu_container">
 
             <div className="nav_item"> 
-              <Link to="/">Projects</Link> 
+              <Link to="/">Home</Link> 
+            </div>
+
+            <div className="nav_item"> 
+              <Link to="/projects">Projects</Link> 
             </div>
 
             <div className="nav_item"> 
@@ -68,7 +72,7 @@ class App extends React.Component {
           <Switch>
     
           <Route
-            exact path='/'
+            exact path='/projects'
             render={() => (
               <Projects projects={this.props.projects}/>
             )}
