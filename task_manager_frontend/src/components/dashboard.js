@@ -11,3 +11,5 @@ export const Dashboard = (props) => {
         </div>
     )
 }
+
+// Need victory graph component for widget graphs
