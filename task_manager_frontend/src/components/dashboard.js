@@ -13,3 +13,5 @@ export const Dashboard = (props) => {
 }
 
 // Need victory graph component for widget graphs
+// use pie charts for tracking statuses of tasks
+// use line graphs for top submitters and executors
