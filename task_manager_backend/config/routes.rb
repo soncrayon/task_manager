@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :user_replies
+  resources :user_notes
+  resources :replies
+  resources :notes
   resources :team_members
   resources :resources
   resources :assigners
