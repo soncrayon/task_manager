@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_16_010453) do
+ActiveRecord::Schema.define(version: 2021_07_21_224646) do
 
   create_table "assigners", force: :cascade do |t|
     t.integer "task_id", null: false
@@ -29,6 +29,14 @@ ActiveRecord::Schema.define(version: 2021_07_16_010453) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "notes", force: :cascade do |t|
+    t.text "content"
+    t.integer "task_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["task_id"], name: "index_notes_on_task_id"
+  end
+
   create_table "project_milestones", force: :cascade do |t|
     t.integer "project_id", null: false
     t.integer "milestone_id", null: false
@@ -44,6 +52,14 @@ ActiveRecord::Schema.define(version: 2021_07_16_010453) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "replies", force: :cascade do |t|
+    t.text "content"
+    t.integer "note_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["note_id"], name: "index_replies_on_note_id"
   end
 
   create_table "resources", force: :cascade do |t|
@@ -84,6 +100,24 @@ ActiveRecord::Schema.define(version: 2021_07_16_010453) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "user_notes", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "note_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["note_id"], name: "index_user_notes_on_note_id"
+    t.index ["user_id"], name: "index_user_notes_on_user_id"
+  end
+
+  create_table "user_replies", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "reply_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["reply_id"], name: "index_user_replies_on_reply_id"
+    t.index ["user_id"], name: "index_user_replies_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "title"
@@ -93,12 +127,18 @@ ActiveRecord::Schema.define(version: 2021_07_16_010453) do
 
   add_foreign_key "assigners", "tasks"
   add_foreign_key "assigners", "users"
+  add_foreign_key "notes", "tasks"
   add_foreign_key "project_milestones", "milestones"
   add_foreign_key "project_milestones", "projects"
+  add_foreign_key "replies", "notes"
   add_foreign_key "resources", "tasks"
   add_foreign_key "resources", "users"
   add_foreign_key "tasks", "milestones"
   add_foreign_key "tasks", "types"
   add_foreign_key "team_members", "projects"
   add_foreign_key "team_members", "users"
+  add_foreign_key "user_notes", "notes"
+  add_foreign_key "user_notes", "users"
+  add_foreign_key "user_replies", "replies"
+  add_foreign_key "user_replies", "users"
 end

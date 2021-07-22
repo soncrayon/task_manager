@@ -17,7 +17,7 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   position: fixed;
-  
+  z-index: 2;
 }
 
 .app_title {
@@ -27,7 +27,6 @@ body {
   justify-content: center;
   width: 20%;
   background-color: white;
-  z-index: 2;
 }
 
 .menu_container {
@@ -83,4 +82,52 @@ body {
 .row_item:hover {
   cursor: pointer;
   font-weight: 200;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 2.5%; 
+  width: 100vw;
+  height: 95vh;
+}
+
+.widget_pair {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 45%;
+  width: 100%;
+}
+
+.widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%;
+  height: 100%;
+  border-style: solid;
+  border-color: gray;
+  border-radius: 5rem;
+  border-width: 0.1rem;
+  overflow: hidden;
+}
+
+.pie_title {
+  height: 10%;
+  width: 100%; 
+  text-align: center;
+}
+
+.pie_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 90%;
+  width: 100%;
+}
+
+.pie_graph {
+  height: 90%;
 }

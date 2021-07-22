@@ -14,6 +14,7 @@ import { Projects } from './components/projects'
 import { Tasks } from './components/tasks'
 import { Users } from './components/users'
 import { Clients } from './components/clients'
+import { Dashboard } from './components/dashboard';
 
 
 import './App.css';
@@ -46,7 +47,7 @@ class App extends React.Component {
             <div className="menu_container">
 
             <div className="nav_item"> 
-              <Link to="/">Home</Link> 
+              <Link to="/">Dashboard</Link> 
             </div>
 
             <div className="nav_item"> 
@@ -71,6 +72,13 @@ class App extends React.Component {
 
           <Switch>
     
+          <Route
+            exact path='/'
+            render={() => (
+              <Dashboard projects={this.props.projects}/>
+            )}
+          />
+          
           <Route
             exact path='/projects'
             render={() => (
