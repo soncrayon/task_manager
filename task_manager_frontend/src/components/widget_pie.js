@@ -3,15 +3,16 @@ import { VictoryPie } from 'victory';
 import { Legend } from './legend';
 
 export const WidgetPie = (props) => {
+    console.log(props)
     return (
         <div className="widget">
             {/* grab this title from props later */}
-            <div className="pie_title">
-                <h3>Title placeholder</h3>
+            <div className="table_title">
+                <h3>{props.title}</h3>
             </div>
-            <div className="pie_content">
-                <div className="pie_graph">
-                    <VictoryPie /> 
+            <div className="table_content">
+                <div className="table_graph">
+                    <VictoryPie colorScale={["tomato", "orange", "gold", "cyan", "navy" ]}/> 
                 </div> 
                 <Legend />  
             </div>

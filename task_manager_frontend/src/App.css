@@ -21,7 +21,7 @@ body {
 }
 
 .app_title {
-  border-color: lightblue;
+  border-color: rgb(240, 200, 113);
   border-style: solid;
   display: flex;
   justify-content: center;
@@ -34,7 +34,7 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   width: 100%; 
-  background-color: lightblue;
+  background-color: rgb(240, 200, 113);
 }
 
 .nav_item {
@@ -51,13 +51,25 @@ body {
   color: gray; 
 }
 
-.top_div {
+
+
+.all_projects {
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
+  margin-top: 5rem;
 }
 
-.all_projects, .all_clients, .all_personnel, .all_tasks{
+.data_div {
+  border-style: solid;
+  border-color: gray;
+  border-width: 0.1rem;
+  width: 100%;
+}
+
+.all_clients, .all_personnel, .all_tasks{
   height: 100%;
   width: 100%;
   margin: 5rem; 
@@ -109,18 +121,18 @@ body {
   height: 100%;
   border-style: solid;
   border-color: gray;
-  border-radius: 5rem;
+  border-radius: 2rem;
   border-width: 0.1rem;
   overflow: hidden;
 }
 
-.pie_title {
+.table_title {
   height: 10%;
   width: 100%; 
   text-align: center;
 }
 
-.pie_content {
+.table_content {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -128,6 +140,6 @@ body {
   width: 100%;
 }
 
-.pie_graph {
+.table_graph {
   height: 90%;
 }

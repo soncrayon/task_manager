@@ -6,12 +6,12 @@ export const Dashboard = (props) => {
     return (
         <div className="dashboard">
             <div className="widget_pair">
-                <WidgetPie />
-                <WidgetPie />
+                <WidgetPie title={"Project Status"} projects={props.projects}/>
+                <WidgetPie title={"Task Status"} projects={props.projects}/>
             </div>
             <div className="widget_pair">
-                <WidgetLine />
-                <WidgetLine />
+                <WidgetLine title={"Top Executors"}/>
+                <WidgetLine title={"Top Assigners"}/>
             </div>
         </div>
     )
