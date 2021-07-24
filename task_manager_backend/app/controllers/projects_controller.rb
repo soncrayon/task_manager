@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :set_project, only: [:show, :update, :destroy]
+  before_action :set_project, only: [:show, :update, :destroy, :get_top_5_assigners, :get_top_5_resources]
 
   # GET /projects
   def index
@@ -11,6 +11,14 @@ class ProjectsController < ApplicationController
   # GET /projects/1
   def show
     render json: @project
+  end
+
+  def get_top_5_assigners
+    render json: @project.get_top_5_assigners  
+  end
+
+  def get_top_5_resources
+    render json: @project.get_top_5_resources 
   end
 
   # POST /projects

@@ -6,7 +6,7 @@ import { fetchAssigners } from './actions/assignerActions'
 import { fetchMilestones } from './actions/milestoneActions'
 import { fetchProjects } from './actions/projectActions'
 import { fetchResources } from './actions/resourceActions'
-import { fetchTasks } from './actions/taskActions'
+import { fetchTasks, fetchTaskStatusPercentages } from './actions/taskActions'
 import { fetchTeamMembers } from './actions/teamMemberActions'
 import { fetchUsers } from './actions/userActions'
 
@@ -29,6 +29,7 @@ class App extends React.Component {
     this.props.fetchResources()
     this.props.fetchTeamMembers()
     this.props.fetchUsers()
+    this.props.fetchTaskStatusPercentages()
   }
 
   render() {
@@ -75,7 +76,7 @@ class App extends React.Component {
           <Route
             exact path='/'
             render={() => (
-              <Dashboard projects={this.props.projects}/>
+              <Dashboard data={this.props.tasks}/>
             )}
           />
           
@@ -134,6 +135,7 @@ const mapDispatchToProps = dispatch => ({
   fetchProjects: () => dispatch(fetchProjects()), 
   fetchResources: () => dispatch(fetchResources()),
   fetchTasks: () => dispatch(fetchTasks()), 
+  fetchTaskStatusPercentages: () => dispatch(fetchTaskStatusPercentages()),
   fetchTeamMembers: () => dispatch(fetchTeamMembers()), 
   fetchUsers: () => dispatch(fetchUsers())
 })

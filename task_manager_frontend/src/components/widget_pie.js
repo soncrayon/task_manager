@@ -3,7 +3,7 @@ import { VictoryPie } from 'victory';
 import { Legend } from './legend';
 
 export const WidgetPie = (props) => {
-    console.log(props)
+    console.log(props.data)
     return (
         <div className="widget">
             {/* grab this title from props later */}
@@ -12,7 +12,14 @@ export const WidgetPie = (props) => {
             </div>
             <div className="table_content">
                 <div className="table_graph">
-                    <VictoryPie colorScale={["tomato", "orange", "gold", "cyan", "navy" ]}/> 
+                    <VictoryPie colorScale={["tomato", "orange", "gold", "cyan", "navy" ]}
+                    data={[
+                        {x: 1, y: props.data.task_percentages['Active'], label:'Active'},
+                        {x: 2, y: props.data.task_percentages['On Hold'], label:'On Hold'},
+                        {x: 3, y: props.data.task_percentages['Cancelled'], label:'Cancelled'},
+                        {x: 4, y: props.data.task_percentages['Complete'], label:'Complete'},
+                    
+                    ]}/> 
                 </div> 
                 <Legend />  
             </div>

@@ -13,6 +13,10 @@ class AssignersController < ApplicationController
     render json: @assigner
   end
 
+  def get_top_5_all
+    render json: Assigner.get_top_5
+  end
+
   # POST /assigners
   def create
     @assigner = Assigner.new(assigner_params)

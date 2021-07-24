@@ -12,6 +12,7 @@ export const WidgetLine = (props) => {
                 <div className="table_graph">
                     <VictoryChart>
                         <VictoryLine /> 
+                        <VictoryLine /> 
                     </VictoryChart> 
                 </div> 
                 <Legend />  

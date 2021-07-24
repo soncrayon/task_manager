@@ -13,6 +13,10 @@ class TasksController < ApplicationController
     render json: @task
   end
 
+  def task_status_percentages
+    render json: Task.task_status_percentages
+  end
+
   # POST /tasks
   def create
     @task = Task.new(task_params)

@@ -13,6 +13,10 @@ class ResourcesController < ApplicationController
     render json: @resource
   end
 
+  def get_top_5_all
+    render json: Resource.get_top_5
+  end
+
   # POST /resources
   def create
     @resource = Resource.new(resource_params)

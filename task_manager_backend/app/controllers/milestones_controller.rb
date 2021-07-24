@@ -13,6 +13,10 @@ class MilestonesController < ApplicationController
     render json: @milestone
   end
 
+  def active_tasks_per_milestone
+    render json: Milestone.active_tasks_per_milestone
+  end
+
   # POST /milestones
   def create
     @milestone = Milestone.new(milestone_params)

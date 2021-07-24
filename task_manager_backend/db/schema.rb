@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_21_224646) do
+ActiveRecord::Schema.define(version: 2021_07_24_194948) do
 
   create_table "assigners", force: :cascade do |t|
     t.integer "task_id", null: false
@@ -80,7 +80,10 @@ ActiveRecord::Schema.define(version: 2021_07_21_224646) do
     t.integer "type_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "create_date"
+    t.integer "project_id", null: false
     t.index ["milestone_id"], name: "index_tasks_on_milestone_id"
+    t.index ["project_id"], name: "index_tasks_on_project_id"
     t.index ["type_id"], name: "index_tasks_on_type_id"
   end
 
@@ -134,6 +137,7 @@ ActiveRecord::Schema.define(version: 2021_07_21_224646) do
   add_foreign_key "resources", "tasks"
   add_foreign_key "resources", "users"
   add_foreign_key "tasks", "milestones"
+  add_foreign_key "tasks", "projects"
   add_foreign_key "tasks", "types"
   add_foreign_key "team_members", "projects"
   add_foreign_key "team_members", "users"

@@ -29,19 +29,6 @@ Type.create([
     {name: "Phase 5", description: "Fifth phase"},
 ])
 
-Milestone.all.each { |mils|
-    Type.all.each { |type|
-        5.times {
-            Task.create({name: "#{Faker::Hacker.verb} #{Faker::Hacker.adjective} #{Faker::Hacker.noun}", 
-            due_date: (Time.now + rand(1000000)).strftime("%b %d, %Y"), 
-            status: "Active", 
-            description: Faker::Lorem.paragraph, 
-            milestone_id: mils.id, 
-            type_id: type.id})
-        }
-    }
-}
-
 users_array = []
 
 100.times {
@@ -60,7 +47,38 @@ Project.all.each { |proj|
         TeamMember.create({project_id: proj.id, user_id: User.all[x].id})
         x = x + 1
     }
+    Milestone.all.each { |mils|
+        Type.all.each { |type|
+            base_task = {
+                name: "#{Faker::Hacker.verb} #{Faker::Hacker.adjective} #{Faker::Hacker.noun}", 
+                due_date: (Time.now + rand(1000000)).strftime("%b %d, %Y"), 
+                create_date: (Time.now - rand(1000000)).strftime("%b %d, %Y"),
+                description: Faker::Lorem.paragraph, 
+                milestone_id: mils.id, 
+                project_id: proj.id,
+                type_id: type.id
+            }
+            3.times {
+                Task.create({**base_task,
+                status: "Active"})
+            }
+            1.times {
+                Task.create({**base_task,
+                status: "On Hold"})
+            }
+            1.times {
+                Task.create({**base_task,
+                status: "Cancelled"})
+            }
+            3.times {
+                Task.create({**base_task,
+                status: "Complete"})
+            }
+        }
+    }
 }
+
+
 
 Task.all.each { |task|
     Assigner.create({task_id: task.id, user_id: User.all[rand(User.all.length)].id})
