@@ -22,7 +22,7 @@ class Task < ApplicationRecord
   def self.task_status_percentages
     percentage_hash = {}
     self.tally_task_statuses.each { |k, v|
-      percentage_hash[k] = (v.to_f/Task.all.length.to_f)*100
+      percentage_hash[k] = ((v.to_f/Task.all.length.to_f)*100).floor
     }
     percentage_hash
   end

@@ -1,13 +1,15 @@
 import React from 'react'
-import { WidgetPie } from './widget_pie'
+import {WidgetPie} from './widget_pie'
 import { WidgetLine } from './widget_line'
+import {WidgetPie2} from './widget_pie2'
+
 
 export const Dashboard = (props) => {
     return (
         <div className="dashboard">
             <div className="widget_pair">
-                <WidgetPie title={"Task Statuses"} data={props.data.tasks}/>
-                <WidgetPie title={"Open Tasks per Milestone"} projects={props.projects}/>
+                <WidgetPie title="Task Statuses" type="status" data={props.data.task_percentages}/>
+                <WidgetPie2 title="Open Tasks per Milestone" type="open_tasks" data={props.mils_data}/>
             </div>
             <div className="widget_pair">
                 <WidgetLine title={"Task Assignment"}/>

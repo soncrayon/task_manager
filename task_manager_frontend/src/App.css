@@ -41,6 +41,7 @@ body {
   width: 25%; 
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .nav_item a {
@@ -141,5 +142,5 @@ body {
 }
 
 .table_graph {
-  height: 90%;
+  height: 85%;
 }

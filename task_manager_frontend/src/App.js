@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 
 import { fetchAssigners } from './actions/assignerActions'
-import { fetchMilestones } from './actions/milestoneActions'
+import { fetchMilestones, fetchOpenTasksPerMilestone } from './actions/milestoneActions'
 import { fetchProjects } from './actions/projectActions'
 import { fetchResources } from './actions/resourceActions'
 import { fetchTasks, fetchTaskStatusPercentages } from './actions/taskActions'
@@ -30,6 +30,7 @@ class App extends React.Component {
     this.props.fetchTeamMembers()
     this.props.fetchUsers()
     this.props.fetchTaskStatusPercentages()
+    this.props.fetchOpenTasksPerMilestone()
   }
 
   render() {
@@ -76,7 +77,7 @@ class App extends React.Component {
           <Route
             exact path='/'
             render={() => (
-              <Dashboard data={this.props.tasks}/>
+              <Dashboard data={this.props.tasks} mils_data={this.props.milestones.open_tasks}/>
             )}
           />
           
@@ -132,6 +133,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => ({
   fetchAssigners: () => dispatch(fetchAssigners()),
   fetchMilestones: () => dispatch(fetchMilestones()), 
+  fetchOpenTasksPerMilestone: () => dispatch(fetchOpenTasksPerMilestone()),
   fetchProjects: () => dispatch(fetchProjects()), 
   fetchResources: () => dispatch(fetchResources()),
   fetchTasks: () => dispatch(fetchTasks()), 
