@@ -1,8 +1,27 @@
 import React from 'react'
 import { VictoryPie } from 'victory';
-import { Legend } from './legend';
 
 export const WidgetPie = (props) => {
+
+    const populateData = () => {
+        let pieData =[{
+            x: "No data for visualization yet."
+        }]     
+        Object.entries(props.data).map((arr, idx) => {
+            if (props.type === "status") {
+                return pieData.push({x: idx, y: arr[1], label: `${arr[0]}: ${arr[1]}%`})
+            }
+            return pieData.push({x: idx, y: arr[1], label: `${arr[0]}: ${arr[1]}`})
+        })
+        return nixDefaultLanguage(pieData)
+    }
+
+    const nixDefaultLanguage = (pieData) => {
+        if (pieData.length > 1) {
+            pieData.shift()
+        }
+        return pieData
+   }
 
     return (
         <div className="widget">
@@ -15,18 +34,14 @@ export const WidgetPie = (props) => {
 
                     <VictoryPie colorScale={["tomato", "orange", "gold", "cyan", "navy" ]}/> :
 
-                    <VictoryPie colorScale={["tomato", "orange", "gold", "cyan", "navy" ]}
-                    data={[
-                    {x: 1, y: props.data['Active'], label:`Active: ${props.data['Active']}%`},
-                    {x: 2, y: props.data['On Hold'], label:`On Hold: ${props.data['On Hold']}%`},
-                    {x: 3, y: props.data['Cancelled'], label:`Cancelled: ${props.data['Cancelled']}%`},
-                    {x: 4, y: props.data['Complete'], label:`Complete: ${props.data['Complete']}%`},
-                    ]}
+                    <VictoryPie colorScale={["tomato", "orange", "gold", "cyan", "navy", "purple", "black" ]} 
+                    data={populateData()}
+                    innerRadius={100}
                     /> 
+
                     }
                    
                 </div> 
-                <Legend />  
             </div>
             
         </div>

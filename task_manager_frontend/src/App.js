@@ -77,7 +77,7 @@ class App extends React.Component {
           <Route
             exact path='/'
             render={() => (
-              <Dashboard data={this.props.tasks} mils_data={this.props.milestones.open_tasks}/>
+              <Dashboard task_dash_data={this.props.tasks.dash_data} mils_dash_data={this.props.milestones.dash_data}/>
             )}
           />
           
