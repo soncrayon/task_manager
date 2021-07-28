@@ -1,5 +1,4 @@
 export const milestones = (state = [], action) => {
-    console.log(state)
     const storeStates = {
         'LOADING_MILESTONES': state,
         'ADD_MILESTONES': {...state, milestones: action.payload},

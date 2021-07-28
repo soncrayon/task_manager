@@ -2,10 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 
-import { fetchAssigners } from './actions/assignerActions'
+import { fetchAssigners, fetchTopAssigners } from './actions/assignerActions'
 import { fetchMilestones, fetchOpenTasksPerMilestone } from './actions/milestoneActions'
 import { fetchProjects } from './actions/projectActions'
-import { fetchResources } from './actions/resourceActions'
+import { fetchResources, fetchTopExecutors } from './actions/resourceActions'
 import { fetchTasks, fetchTaskStatusPercentages } from './actions/taskActions'
 import { fetchTeamMembers } from './actions/teamMemberActions'
 import { fetchUsers } from './actions/userActions'
@@ -22,13 +22,15 @@ import './App.css';
 class App extends React.Component {
 
   componentDidMount(){
-    this.props.fetchProjects()
-    this.props.fetchMilestones()
-    this.props.fetchTasks()
-    this.props.fetchAssigners()
-    this.props.fetchResources()
-    this.props.fetchTeamMembers()
-    this.props.fetchUsers()
+    // this.props.fetchProjects()
+    // this.props.fetchMilestones()
+    // this.props.fetchTasks()
+    // this.props.fetchAssigners()
+    // this.props.fetchResources()
+    // this.props.fetchTeamMembers()
+    // this.props.fetchUsers()
+    this.props.fetchTopAssigners()
+    this.props.fetchTopExecutors()
     this.props.fetchTaskStatusPercentages()
     this.props.fetchOpenTasksPerMilestone()
   }
@@ -77,7 +79,11 @@ class App extends React.Component {
           <Route
             exact path='/'
             render={() => (
-              <Dashboard task_dash_data={this.props.tasks.dash_data} mils_dash_data={this.props.milestones.dash_data}/>
+              <Dashboard 
+              top_assigners={this.props.assigners.top_assigners}
+              top_resources={this.props.resources.top_resources}
+              task_dash_data={this.props.tasks.dash_data} 
+              mils_dash_data={this.props.milestones.dash_data}/>
             )}
           />
           
@@ -132,10 +138,12 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
   fetchAssigners: () => dispatch(fetchAssigners()),
+  fetchTopAssigners: () => dispatch(fetchTopAssigners()),
   fetchMilestones: () => dispatch(fetchMilestones()), 
   fetchOpenTasksPerMilestone: () => dispatch(fetchOpenTasksPerMilestone()),
   fetchProjects: () => dispatch(fetchProjects()), 
   fetchResources: () => dispatch(fetchResources()),
+  fetchTopExecutors: () => dispatch(fetchTopExecutors()), 
   fetchTasks: () => dispatch(fetchTasks()), 
   fetchTaskStatusPercentages: () => dispatch(fetchTaskStatusPercentages()),
   fetchTeamMembers: () => dispatch(fetchTeamMembers()), 

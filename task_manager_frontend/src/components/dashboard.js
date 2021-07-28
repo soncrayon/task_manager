@@ -11,8 +11,8 @@ export const Dashboard = (props) => {
                 <WidgetPie title="Open Tasks per Milestone" type="open_tasks" data={props.mils_dash_data}/>
             </div>
             <div className="widget_pair">
-                <WidgetLine title={"Task Assignment"}/>
-                <WidgetLine title={"Task Execution"}/>
+                <WidgetLine title="Top Assigners" type="assigners" data={props.top_assigners}/>
+                <WidgetLine title="Top Executors" type="executors" data={props.top_resources}/>
             </div>
         </div>
     )

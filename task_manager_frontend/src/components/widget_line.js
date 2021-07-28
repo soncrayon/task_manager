@@ -1,7 +1,25 @@
 import React from 'react'
-import { VictoryLine, VictoryChart, VictoryTheme } from 'victory';
+import { VictoryBar, VictoryChart, VictoryTheme } from 'victory';
 
 export const WidgetLine = (props) => {
+
+    const populateData = () => {
+        let chartData =[{
+            x: "No data for visualization yet."
+        }]     
+        Object.entries(props.data).map((arr, idx) => {
+                return chartData.push({x: arr[0], y: arr[1]})
+        })
+        return nixDefaultLanguage(chartData)
+    }
+
+    const nixDefaultLanguage = (chartData) => {
+        if (chartData.length > 1) {
+            chartData.shift()
+        }
+        return chartData
+   }
+
     return (
         <div className="widget">
             <div className="table_title">
@@ -9,18 +27,21 @@ export const WidgetLine = (props) => {
             </div>
             <div className="table_content">
                 <div className="table_graph">
+
+                {typeof props.data == "undefined" ? 
+
+                <VictoryChart /> :
+
                     <VictoryChart theme={VictoryTheme.material}>
-                        <VictoryLine 
-                        data={[
-                        { x: "person 1", y: 1 },
-                        { x: "person 2", y: 3 },
-                        { x: "person 3", y: 5 },
-                        { x: "person 4", y: 4 },
-                        { x: "person 5", y: 7 }
-                        ]}
+                        <VictoryBar 
+                        horizontal 
+                        data={populateData()}  
+                        labels={({ datum }) => datum.y}
+                        style={{ data: { fill: "maroon"}}}
                         /> 
-                        <VictoryLine /> 
                     </VictoryChart> 
+
+                }
                 </div> 
             </div>
            
