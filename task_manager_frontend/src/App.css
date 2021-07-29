@@ -145,3 +145,27 @@ body {
   height: 85%;
   width: 100%;
 }
+
+.dashboard_dropdown {
+  height: 100%;
+  width: 30%; 
+}
+
+.dropbtn {
+  height: 2rem;
+  width: 5rem;
+}
+
+.dropdown_content {
+  display: none; 
+  flex-direction: column;
+  border-style: solid;
+  border-color: gray;
+  border-width: 0.1rem;
+  background-color: rgb(235, 233, 231);
+}
+
+.dropdown_content p:hover {
+  cursor: pointer;
+  color: rgb(71, 69, 69);
+}

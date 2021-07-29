@@ -1,5 +1,6 @@
 import React from 'react'
 import { VictoryBar, VictoryChart, VictoryTheme } from 'victory';
+import DashboardDropdown from './dashboardDropdown';
 
 export const WidgetLine = (props) => {
 
@@ -42,7 +43,8 @@ export const WidgetLine = (props) => {
                     </VictoryChart> 
 
                 }
-                </div> 
+                </div>
+                <DashboardDropdown diff={props.type} projects={props.projects} proj_spec={props.proj_spec}/> 
             </div>
            
         </div>

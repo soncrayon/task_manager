@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 
-import { fetchAssigners, fetchTopAssigners } from './actions/assignerActions'
+import { fetchAssigners, fetchTopAssigners, fetchProjTopAssigners } from './actions/assignerActions'
 import { fetchMilestones, fetchOpenTasksPerMilestone } from './actions/milestoneActions'
 import { fetchProjects } from './actions/projectActions'
 import { fetchResources, fetchTopExecutors } from './actions/resourceActions'
@@ -22,7 +22,7 @@ import './App.css';
 class App extends React.Component {
 
   componentDidMount(){
-    // this.props.fetchProjects()
+    this.props.fetchProjects()
     // this.props.fetchMilestones()
     // this.props.fetchTasks()
     // this.props.fetchAssigners()
@@ -80,10 +80,15 @@ class App extends React.Component {
             exact path='/'
             render={() => (
               <Dashboard 
+              projects={this.props.projects}
               top_assigners={this.props.assigners.top_assigners}
               top_resources={this.props.resources.top_resources}
               task_dash_data={this.props.tasks.dash_data} 
-              mils_dash_data={this.props.milestones.dash_data}/>
+              mils_dash_data={this.props.milestones.dash_data}
+              
+              get_proj_top_assigners={this.props.fetchProjTopAssigners}
+
+              />
             )}
           />
           
@@ -139,6 +144,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => ({
   fetchAssigners: () => dispatch(fetchAssigners()),
   fetchTopAssigners: () => dispatch(fetchTopAssigners()),
+  fetchProjTopAssigners: (projID) => dispatch(fetchProjTopAssigners(projID)),
   fetchMilestones: () => dispatch(fetchMilestones()), 
   fetchOpenTasksPerMilestone: () => dispatch(fetchOpenTasksPerMilestone()),
   fetchProjects: () => dispatch(fetchProjects()), 

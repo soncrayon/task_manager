@@ -1,16 +1,43 @@
 import React from 'react'
 
-export default class dashboardDropdown extends React.Component {
+export default class DashboardDropdown extends React.Component {
+
+    state = {
+        dropDown: 'inactive'
+    }
+    
+    toggleDropdown = () => {
+        let dropDown = document.querySelector(`.${this.props.diff}`)
+        if (this.state.dropDown === 'inactive'){
+            dropDown.style.display = "flex" 
+            this.setState(() => {
+                return {dropDown: 'active'}
+            })
+        } else {
+            dropDown.style.display = "none"
+            this.setState(() => {
+                return {dropDown: 'inactive'}
+            })        
+        }
+    }
+
+    setDropdownClass = () => {
+        return `dropdown_content ${this.props.diff}`
+    }
+
+    // redo projectFilter method below to call fetch method for project specific data
+    // set another button to re-fetch the aggregate data
+    // this.props.proj_spec()
+
     render(){
         return(
             <div className="dashboard_dropdown">
-                <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-                <div id="myDropdown" class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                    {/* need a link for each project and a reset button to return to aggregate */}
-                    {/* dropdown needs a search function to scale with number of projects */}
+                <button onClick={() => this.toggleDropdown()} className="dropbtn">Dropdown</button>
+
+                <div className={this.setDropdownClass()}>
+                    {this.props.projects.map((proj) => {
+                        return <p id={proj.id} onClick={() => this.props.proj_spec(proj.id)}>{proj.name}</p>
+                    })}
                 </div>
             </div>
         )

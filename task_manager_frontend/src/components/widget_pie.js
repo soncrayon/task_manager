@@ -1,5 +1,6 @@
 import React from 'react'
 import { VictoryPie } from 'victory';
+import DashboardDropdown from './dashboardDropdown';
 
 export const WidgetPie = (props) => {
 
@@ -41,7 +42,8 @@ export const WidgetPie = (props) => {
 
                     }
                    
-                </div> 
+                </div>
+                <DashboardDropdown diff={props.type} projects={props.projects}/>  
             </div>
             
         </div>
