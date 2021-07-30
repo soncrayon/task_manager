@@ -23,12 +23,12 @@ class App extends React.Component {
 
   componentDidMount(){
     this.props.fetchProjects()
-    // this.props.fetchMilestones()
-    // this.props.fetchTasks()
-    // this.props.fetchAssigners()
-    // this.props.fetchResources()
-    // this.props.fetchTeamMembers()
-    // this.props.fetchUsers()
+    this.props.fetchMilestones()
+    this.props.fetchTasks()
+    this.props.fetchAssigners()
+    this.props.fetchResources()
+    this.props.fetchTeamMembers()
+    this.props.fetchUsers()
     this.props.fetchTopAssigners()
     this.props.fetchTopExecutors()
     this.props.fetchTaskStatusPercentages()
