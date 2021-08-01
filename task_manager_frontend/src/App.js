@@ -102,7 +102,7 @@ class App extends React.Component {
           <Route
             exact path='/tasks'
             render={() => (
-              <Tasks tasks={this.props.tasks} resources={this.props.resources} assigners={this.props.assigners}/>
+              <Tasks tasks={this.props.tasks.tasks} resources={this.props.resources} assigners={this.props.assigners}/>
             )}
           />
 

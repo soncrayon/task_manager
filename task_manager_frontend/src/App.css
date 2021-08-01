@@ -54,7 +54,7 @@ body {
 
 
 
-.all_projects {
+/* .all_projects {
   height: 100%;
   width: 100%;
   display: flex;
@@ -68,9 +68,9 @@ body {
   border-color: gray;
   border-width: 0.1rem;
   width: 100%;
-}
+} */
 
-.all_clients, .all_personnel, .all_tasks{
+/* .all_clients, .all_personnel, .all_tasks{
   height: 100%;
   width: 100%;
   margin: 5rem; 
@@ -95,6 +95,10 @@ body {
 .row_item:hover {
   cursor: pointer;
   font-weight: 200;
+} */
+
+.container {
+  margin-top: 5%;
 }
 
 .dashboard {
