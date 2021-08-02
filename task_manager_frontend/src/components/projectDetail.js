@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const projectDetail = (props) => {
+export const ProjectDetail = (props) => {
     return (
         <div>
             placeholder for project detail 
@@ -8,3 +8,4 @@ export const projectDetail = (props) => {
     )
 }
 
+// TODO: pass the appropriate props based on the project that's clicked

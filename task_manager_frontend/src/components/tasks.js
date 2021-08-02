@@ -18,7 +18,7 @@ export const Tasks = (props) => {
                     {props.tasks.map((task, key) => {
                         return (
                             <tr>
-                                <Task name={task.name} due_date={task.due_date} status={task.status} task_number={task.id} resources={props.resources} assigners={props.assigners}/> 
+                                <Task name={task.name} due_date={task.due_date} status={task.status} task_number={task.id} resources={props.resources} assigners={props.assigners} openDetail={props.openDetail}/> 
                             </tr>
                             )
                         })}

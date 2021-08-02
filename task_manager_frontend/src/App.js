@@ -18,9 +18,10 @@ import { Dashboard } from './components/dashboard';
 
 
 import './App.css';
+import { ProjectDetail } from './components/projectDetail';
 
 class App extends React.Component {
-
+  
   componentDidMount(){
     this.props.fetchProjects()
     this.props.fetchMilestones()
@@ -37,8 +38,6 @@ class App extends React.Component {
 
   render() {
 
-
-  
     return (
       <React.Fragment>
         <Router>
@@ -102,7 +101,7 @@ class App extends React.Component {
           <Route
             exact path='/tasks'
             render={() => (
-              <Tasks tasks={this.props.tasks.tasks} resources={this.props.resources} assigners={this.props.assigners}/>
+              <Tasks tasks={this.props.tasks.tasks} resources={this.props.resources} assigners={this.props.assigners} openDetail={this.openDetail}/>
             )}
           />
 
@@ -117,6 +116,13 @@ class App extends React.Component {
             exact path='/clients'
             render={() => (
               <Clients projects={this.props.projects} />
+            )}
+          />
+
+          <Route
+            exact path='/project_detail'
+            render={() => (
+              <ProjectDetail projects={this.props.projects} />
             )}
           />
 

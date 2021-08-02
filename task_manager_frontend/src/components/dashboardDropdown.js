@@ -25,6 +25,11 @@ export default class DashboardDropdown extends React.Component {
         return `dropdown_content ${this.props.diff}`
     }
 
+    makeDataProjSpecific = (projID) => {
+        // use query selector to append name of project to widget title
+        // then call the proj_spec function
+    }
+
     // redo projectFilter method below to call fetch method for project specific data
     // set another button to re-fetch the aggregate data
     // this.props.proj_spec()
