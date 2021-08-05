@@ -1,8 +1,10 @@
 import React from 'react'
+import { DataMenu } from './dataMenu'
 // import { Project } from './project'
 
 export const Projects = (props) => {
     return (
+        <>
         <div className="container">
         <h3>Projects</h3>
             <table className="table">
@@ -26,6 +28,8 @@ export const Projects = (props) => {
                 </tbody>
             </table>
         </div>
+        <DataMenu /> 
+        </>
         
     )
 }
